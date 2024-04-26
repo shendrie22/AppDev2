@@ -20,15 +20,29 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-
+// give the data 
 Route::get('/greet', function () {
     return 'Hello World';
 });
-// get the data 
+// post the data 
 route::post('/greeting', function () {
     return 'sdfsdfdsfasdf';
 });
-// give the data 
+
+// PUT route
+Route::put('/update/{id}', function ($id) {
+    return "User with ID $id updated!";
+});
+
+// PATCH route
+Route::patch('/modify/{id}', function ($id) {
+    return "User with ID $id modified!";
+});
+
+// DELETE route
+Route::delete('/delete/{id}', function ($id) {
+    return "User with ID $id deleted!";
+});
 
 
 Route::any('/update-user', function () {
